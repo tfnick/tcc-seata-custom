@@ -1,0 +1,33 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: tcc-service-b
+  cloud:
+    consul:
+      host: 192.168.1.100
+      port: 8500
+      enabled: true
+      discovery:
+        enabled: true
+        scheme: http
+        service-name: ${spring.application.name}
+        prefer-ip-address: false
+        health-check-tls-skip-verify: true
+        health-check-critical-timeout: 60s
+        instanceId: ${spring.application.name}-${server.port}-${random.int}
+        register-health-check: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.100:3306/tcc_service_b?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    username: root
+    password: 123456
+
+
+# not used feign
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 10000
+        read-timeout: 300000

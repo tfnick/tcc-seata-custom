@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tcc-commons/tcc-commons.iml" filepath="$PROJECT_DIR$/tcc-commons/tcc-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tcc-seata-custom.iml" filepath="$PROJECT_DIR$/tcc-seata-custom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tcc-service-a/tcc-service-a.iml" filepath="$PROJECT_DIR$/tcc-service-a/tcc-service-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tcc-service-b/tcc-service-b.iml" filepath="$PROJECT_DIR$/tcc-service-b/tcc-service-b.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: service_tx_group
+  # 使用seata tcc模式的时候请关闭 enable-auto-data-source-proxy: false 自动代码，否则tcc模式执行后会执行at模式
+  enable-auto-data-source-proxy: false
+  service:
+    vgroupMapping:
+      service_tx_group: cyjr-seata-server
+  # 服务发现 建立连接
+  registry:
+    type: consul
+    consul:
+      cluster: cyjr-seata-server
+      server-addr: 192.168.1.100:8500
